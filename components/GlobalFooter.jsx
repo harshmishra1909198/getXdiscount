@@ -10,20 +10,12 @@ const LINK_GROUPS = [
       { label: "Terms", href: "/terms-of-service" },
     ],
   },
-  {
-    title: "Our Shopify apps",
-    links: [
-      { label: "Multivariants - Bulk Order", href: "#" },
-      { label: "Push Bundle", href: "#" },
-      { label: "DiscountRay", href: "#" },
-    ],
-  },
 ];
 
 export function GlobalFooter() {
   return (
     <footer className="mt-6 bg-[#271a13] px-5 py-10 text-white sm:px-8 lg:px-12 lg:py-14 xl:px-16">
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(190px,0.6fr)_minmax(220px,0.7fr)]">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(220px,0.7fr)]">
         <div>
           <div className="inline-flex items-center gap-3 rounded-[22px] bg-white px-4 py-2.5 text-slate-900 shadow-sm">
             <img
@@ -35,8 +27,8 @@ export function GlobalFooter() {
           </div>
 
           <p className="mt-6 max-w-xl text-[1.05rem] leading-8 text-white/78">
-            Build simple discount experiences that help merchants increase order value
-            without adding complexity.
+            Build simple volume discount experiences that help Shopify merchants
+            increase order value without adding complexity.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2.5">

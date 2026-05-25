@@ -1,22 +1,58 @@
 import { LegalLayout } from "../../components/LegalLayout";
-import { Container, SectionTitle } from "../../components/LegalPrimitives";
+import {
+  Badge,
+  Card,
+  Container,
+  Divider,
+  SectionTitle,
+  AnchorList,
+} from "../../components/LegalPrimitives";
 import { CopyEmailButton } from "../../components/CopyEmailButton";
 import { SupportContactForm } from "../../components/SupportContactForm";
 
 export const metadata = {
-  title: "Support & Contact | Volume Discount App",
-  description: "Premium support page for Shopify merchants with copyable email contact.",
+  title: "Support | Volume Discount App",
+  description: "Support page for Volume Discount App with direct merchant contact details.",
 };
 
 const SUPPORT_EMAIL = "getxdiscount@gmail.com";
+
+const SECTIONS = [{ label: "Contact", href: "#contact" }];
 
 export default function SupportPage() {
   return (
     <LegalLayout
       title="Support"
-      description="One clean support page for contact and merchant help."
+      description="Need help with volume discount setup, storefront visibility, or billing questions? Email support is available for merchant assistance."
     >
       <Container>
+        <Card className="bg-gradient-to-br from-white to-slate-50/70">
+          <div className="flex flex-wrap gap-3">
+            <Badge tone="blue">Typical reply: 1 business day</Badge>
+            <Badge>Email support</Badge>
+            <Badge tone="violet">Installation help</Badge>
+          </div>
+          <div className="mt-5">
+            <AnchorList items={SECTIONS} />
+          </div>
+          <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600">
+            If you need help installing the app, enabling the storefront block, or
+            understanding how volume discount offers appear on the product page,
+            send a message and include your store domain.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={`mailto:${SUPPORT_EMAIL}?subject=Support%20Request`}
+              className="inline-flex min-h-11 items-center justify-center rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 to-violet-50 px-4 py-2.5 text-sm font-semibold text-blue-700 transition hover:-translate-y-0.5 hover:shadow-soft"
+            >
+              Contact support
+            </a>
+            <CopyEmailButton email={SUPPORT_EMAIL} />
+          </div>
+        </Card>
+
+        <Divider />
+
         <section
           id="contact"
           className="grid gap-0 overflow-hidden rounded-[28px] border border-slate-200 bg-[#f5d8c2]"
@@ -27,7 +63,7 @@ export default function SupportPage() {
               title="Send us a message"
               text="The support form is intentionally open and easy to scan, so merchants can reach out fast."
             />
-            <SupportContactForm recipient={SUPPORT_EMAIL} />
+            <SupportContactForm />
           </div>
 
           <aside className="bg-[#a98272] px-6 py-8 text-white sm:px-8 sm:py-10 lg:px-10">
@@ -38,19 +74,13 @@ export default function SupportPage() {
               <div>
                 <p className="text-[1.15rem] font-semibold text-white/90">Our Web</p>
                 <p className="mt-2 text-[clamp(1.8rem,2.8vw,2.7rem)] font-medium leading-tight">
-                  discountray.com
+                  getxdiscounts.com
                 </p>
               </div>
               <div>
-                <p className="text-[1.15rem] font-semibold text-white/90">E-mail US</p>
+                <p className="text-[1.15rem] font-semibold text-white/90">E-mail us</p>
                 <p className="mt-2 text-[clamp(1.6rem,2.6vw,2.4rem)] font-medium leading-tight">
-                  getxdiscount@gmail.com
-                </p>
-              </div>
-              <div>
-                <p className="text-[1.15rem] font-semibold text-white/90">Our location</p>
-                <p className="mt-2 max-w-md text-[clamp(1.35rem,2vw,2rem)] font-medium leading-tight">
-                  Mirpur DOHS, Dhaka, Bangladesh.
+                  {SUPPORT_EMAIL}
                 </p>
               </div>
               <div className="pt-2">

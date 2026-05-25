@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Volume Discount App",
-  description: "Premium legal pages for a Shopify public app.",
+  description: "Volume Discount App for Shopify merchants.",
 };
 
 export default function RootLayout({ children }) {

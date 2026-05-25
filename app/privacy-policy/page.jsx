@@ -8,17 +8,23 @@ import {
   SectionTitle,
   AnchorList,
 } from "../../components/LegalPrimitives";
+import { CopyEmailButton } from "../../components/CopyEmailButton";
 
 export const metadata = {
   title: "Privacy Policy | Volume Discount App",
-  description: "Premium Shopify privacy policy page with modern legal UI.",
+  description: "Privacy policy for Volume Discount App, including data handling and merchant contact details.",
 };
+
+const SUPPORT_EMAIL = "getxdiscount@gmail.com";
 
 const SECTIONS = [
   { label: "Overview", href: "#overview" },
   { label: "Data", href: "#data" },
+  { label: "Use", href: "#use" },
   { label: "Sharing", href: "#sharing" },
+  { label: "Retention", href: "#retention" },
   { label: "Security", href: "#security" },
+  { label: "Choices", href: "#choices" },
   { label: "Updates", href: "#updates" },
 ];
 
@@ -26,20 +32,22 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalLayout
       title="Privacy Policy"
-      description="A premium, easy-to-read privacy policy layout for the Volume Discount App. The page focuses on UI clarity, spacing, and a polished merchant experience."
+      description="This policy explains what information the app uses from your Shopify store, how it is handled, when it may be shared, and how to contact us with privacy questions."
     >
       <Container>
         <Card className="bg-gradient-to-br from-white to-slate-50/70">
-          <div className="flex flex-wrap gap-2">
-            <Badge tone="blue">Privacy first</Badge>
-            <Badge>Placeholder copy</Badge>
-            <Badge tone="violet">Responsive</Badge>
+          <div className="flex flex-wrap gap-3">
+            <Badge tone="blue">Shopify app</Badge>
+            <Badge tone="violet">Merchant data</Badge>
+            <Badge>Support available</Badge>
           </div>
-          <AnchorList items={SECTIONS} />
-          <p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem vitae
-            lorem vulputate fermentum. Curabitur tempus, sem non blandit rutrum, augue
-            nisl tincidunt neque, vitae posuere elit risus in sapien.
+          <div className="mt-4">
+            <AnchorList items={SECTIONS} />
+          </div>
+          <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600">
+            The app is built to create and manage volume discount offers. To deliver
+            those features, it only accesses the information needed to authenticate the
+            app, configure discounts, render storefront content, and support merchants.
           </p>
         </Card>
 
@@ -49,18 +57,18 @@ export default function PrivacyPolicyPage() {
           <SectionTitle
             id="overview"
             kicker="Overview"
-            title="How this app handles information"
-            text="This layout keeps the content easy to scan while preserving a refined SaaS look."
+            title="What this policy covers"
+            text="This policy applies to the app, related storefront blocks, support requests, and the merchant-facing features that run through Shopify."
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida
-            tristique lorem, quis rhoncus arcu malesuada ut. Integer egestas, risus at
-            posuere mollis, lorem dolor tincidunt metus, a facilisis mi sapien non urna.
+            We use information received from Shopify and information you enter into the
+            app to operate the service. We do not intentionally collect payment card
+            data, and we do not sell merchant or customer data.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Aliquam erat volutpat. Curabitur sodales sem at sapien aliquet, a vulputate
-            neque sollicitudin. Suspendisse potenti. Mauris efficitur nisl in metus
-            consequat, at dignissim nunc commodo.
+            Shopify remains the primary platform for store, order, and customer
+            information. We only access data that is authorized by your Shopify
+            permissions and needed for the features you use.
           </p>
         </Card>
 
@@ -68,20 +76,50 @@ export default function PrivacyPolicyPage() {
           <SectionTitle
             id="data"
             kicker="Data"
-            title="Information we collect"
-            text="Use short paragraphs, structured sections, and clear emphasis for a premium reading experience."
+            title="Information the app may access"
+            text="The exact data depends on the features you enable and the permissions you approve in Shopify."
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada
-            semper erat, a euismod lacus semper sed. Donec tincidunt, purus in accumsan
-            iaculis, turpis mauris finibus nunc, non feugiat elit nisl id risus.
+            The app may access store name, shop domain, merchant contact details,
+            currency, time zone, billing country, plan name, owner name, and app
+            installation details.
+          </p>
+          <p className="mt-4 text-base leading-8 text-slate-600">
+            When you create or manage offers, we may process discount configuration,
+            product targeting, customer targeting, exclusions, scheduling settings,
+            storefront block settings, theme app extension status, and related rule
+            data.
+          </p>
+          <p className="mt-4 text-base leading-8 text-slate-600">
+            Depending on the feature in use, we may also process product, customer, and
+            order information that is necessary to evaluate discount eligibility or
+            render the discount experience correctly in your store.
           </p>
           <div className="mt-5">
-            <HighlightBox title="Important note">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed urna sed
-              nisl facilisis congue. Cras a ipsum at ligula semper tristique.
+            <HighlightBox title="Support requests">
+              If you contact us for help, we may receive the information you send in
+              your request, such as your shop domain, screenshots, and issue details.
             </HighlightBox>
           </div>
+        </Card>
+
+        <Card>
+          <SectionTitle
+            id="use"
+            kicker="Use"
+            title="How we use information"
+            text="We use data only to operate the app, deliver the requested features, and support merchants."
+          />
+          <p className="mt-4 text-base leading-8 text-slate-600">
+            We use this information to authenticate your store, save and update
+            discount rules, display offer blocks on the storefront, manage webhook
+            events, support billing or installation workflows, and respond to merchant
+            support requests.
+          </p>
+          <p className="mt-4 text-base leading-8 text-slate-600">
+            We may also use limited operational data to monitor app performance,
+            diagnose errors, prevent abuse, and improve the app experience.
+          </p>
         </Card>
 
         <Card>
@@ -89,17 +127,40 @@ export default function PrivacyPolicyPage() {
             id="sharing"
             kicker="Sharing"
             title="When information may be shared"
-            text="Use these cards for grouped legal topics, with subtle shadows and rounded corners."
+            text="We do not sell personal information. We share information only when needed to run the app or when required by law."
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet
-            tincidunt sem. Sed faucibus ligula et urna aliquet, in accumsan dolor
-            tristique. Nunc sit amet lacus vel arcu sagittis tristique.
+            We may share data with Shopify and with trusted service providers that help
+            us operate the app, such as hosting, database, logging, monitoring, and
+            support tooling providers.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Donec sit amet turpis in nisl fermentum congue. Nulla facilisi. Mauris
-            convallis, velit at auctor feugiat, ligula turpis condimentum arcu, vitae
-            aliquam odio neque at augue.
+            We may also disclose information if required by law, court order, or a
+            valid legal process, or when we believe disclosure is necessary to protect
+            the rights, safety, and security of the app, our users, or others.
+          </p>
+        </Card>
+
+        <Card>
+          <SectionTitle
+            id="retention"
+            kicker="Retention"
+            title="How long we keep data"
+            text="We keep data only as long as needed to provide the app, maintain records, and meet legal or operational requirements."
+          />
+          <div className="mt-5">
+            <HighlightBox title="Uninstall behavior">
+              When you uninstall the app, we remove active Shopify session records and
+              store-specific discount records from our system. We may retain limited
+              records such as installation history, uninstall history, logs, or other
+              information needed for legal, security, dispute resolution, or accounting
+              purposes.
+            </HighlightBox>
+          </div>
+          <p className="mt-4 text-base leading-8 text-slate-600">
+            If you want us to delete remaining store-specific information, contact us at
+            the email address below and we will review the request according to
+            applicable law and our retention obligations.
           </p>
         </Card>
 
@@ -107,34 +168,63 @@ export default function PrivacyPolicyPage() {
           <SectionTitle
             id="security"
             kicker="Security"
-            title="How we protect merchant data"
-            text="Keep the language professional and concise, with enough breathing room to feel premium."
+            title="How we protect information"
+            text="We use reasonable administrative, technical, and organizational safeguards to protect the data handled by the app."
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a volutpat
-            orci. Morbi lacinia aliquam sapien, vitae convallis nunc lobortis at.
+            Access to merchant information is restricted to app processes and
+            authorized personnel who need it to operate or support the service. We also
+            rely on Shopify authentication and application-level controls to reduce
+            unauthorized access risk.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Cras dictum ligula non justo sollicitudin, vel tempor lectus rhoncus. Sed
-            imperdiet lacus a justo egestas, sit amet feugiat lacus consectetur.
+            No system is perfectly secure, so we encourage merchants to keep their
+            Shopify staff permissions up to date and to review store access regularly.
           </p>
+        </Card>
+
+        <Card>
+          <SectionTitle
+            id="choices"
+            kicker="Choices"
+            title="Merchant rights and choices"
+            text="You control the app through your Shopify store and can also contact us about data questions."
+          />
+          <p className="mt-4 text-base leading-8 text-slate-600">
+            You may uninstall the app at any time through Shopify. You may also request
+            access, correction, or deletion of store-specific information that we hold,
+            subject to legal or operational limits.
+          </p>
+          <p className="mt-4 text-base leading-8 text-slate-600">
+            If you believe a record is incorrect or want help with a privacy request,
+            contact us using the information below.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center gap-3 rounded-[20px] border border-slate-200 bg-slate-50 p-5">
+            <a
+              href={`mailto:${SUPPORT_EMAIL}`}
+              className="text-base font-bold text-slate-950 transition hover:text-orange-700"
+            >
+              {SUPPORT_EMAIL}
+            </a>
+            <CopyEmailButton email={SUPPORT_EMAIL} />
+          </div>
         </Card>
 
         <Card>
           <SectionTitle
             id="updates"
             kicker="Updates"
-            title="Policy changes and contact"
-            text="The layout ends with a clear final section so merchants know where to go next."
+            title="Changes to this policy"
+            text="We may update this policy from time to time to reflect product, legal, or operational changes."
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed augue sed
-            ipsum dignissim tincidunt. Vestibulum ante ipsum primis in faucibus orci
-            luctus et ultrices posuere cubilia curae.
+            If we make material changes, we will update this page with the revised
+            policy. Continued use of the app after an update means you accept the
+            revised policy.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">
-            For questions, use the support page. The footer and anchor links keep the
-            experience streamlined on every screen size.
+            Questions about privacy or data handling can be sent to the email address
+            above.
           </p>
         </Card>
       </Container>
