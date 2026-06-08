@@ -9,40 +9,41 @@ const NAV_ITEMS = [
 export function GlobalHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-300/80 bg-white">
-      <div className="grid w-full grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:px-12">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="grid w-full grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-3 px-4 py-3 sm:px-6 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center lg:gap-4 lg:px-12 lg:py-4">
+        <Link href="/" className="order-1 flex items-center gap-2 sm:gap-3 lg:order-1">
           <img
             src="/volume-discount-logo.png"
             alt="Volume Discount App logo"
-            className="h-12 w-12 rounded-xl object-contain"
+            className="h-10 w-10 rounded-xl object-contain sm:h-12 sm:w-12"
           />
           <span>
-            <span className="block text-[17px] font-extrabold tracking-tight text-slate-950">
+            <span className="block text-[15px] font-extrabold tracking-tight text-slate-950 sm:text-[17px]">
               VolumeX
             </span>
-            <span className="block text-xs text-slate-500">Discount app</span>
+            <span className="block text-[11px] text-slate-500 sm:text-xs">Discount app</span>
           </span>
         </Link>
 
-        <nav className="flex flex-wrap items-center justify-center gap-1 text-[15px] text-slate-900">
+        <a
+          className="order-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#5b2500] bg-[#ba4900] px-4 py-2 text-[13px] font-semibold text-white shadow-[0_12px_24px_rgba(186,73,0,0.18)] transition hover:bg-[#d15603] lg:order-3 lg:min-h-12 lg:px-5 lg:text-[15px]"
+          href="https://apps.shopify.com/"
+        >
+          <span className="text-[15px]">🛍</span>
+          <span className="hidden sm:inline">Get Started</span>
+          <span className="sm:hidden">Start</span>
+        </a>
+
+        <nav className="order-3 col-span-2 flex items-center gap-2 overflow-x-auto whitespace-nowrap pb-0.5 text-[14px] text-slate-900 sm:text-[15px] lg:order-2 lg:col-span-1 lg:justify-center">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 transition hover:text-orange-700"
+              className="shrink-0 rounded-full px-3 py-2 transition hover:bg-orange-50 hover:text-orange-700"
             >
               {item.label}
             </Link>
           ))}
         </nav>
-
-        <a
-          href="https://apps.shopify.com/"
-          className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[#5b2500] bg-[#ba4900] px-5 py-2 text-[15px] font-semibold text-white shadow-[0_12px_24px_rgba(186,73,0,0.18)] transition hover:bg-[#d15603]"
-        >
-          <span className="text-[16px]">🛍</span>
-          <span>Get Started</span>
-        </a>
       </div>
     </header>
   );

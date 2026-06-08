@@ -50,7 +50,7 @@ export default function SupportPage() {
               href={SUPPORT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center justify-center rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 to-violet-50 px-4 py-2.5 text-sm font-semibold text-blue-700 transition hover:-translate-y-0.5 hover:shadow-soft"
+              className="inline-flex min-h-11 w-full items-center justify-center rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 to-violet-50 px-4 py-2.5 text-sm font-semibold text-blue-700 transition hover:-translate-y-0.5 hover:shadow-soft sm:w-auto"
             >
               Contact support
             </a>
@@ -70,7 +70,7 @@ export default function SupportPage() {
             <div className="mt-5 flex flex-wrap items-center gap-3 rounded-[20px] border border-slate-200 bg-slate-50 p-5">
               <a
                 href={`mailto:${SUPPORT_EMAIL}`}
-                className="text-base font-bold text-slate-950 transition hover:text-orange-700"
+                className="w-full text-base font-bold text-slate-950 transition hover:text-orange-700 sm:w-auto"
               >
                 {SUPPORT_EMAIL}
               </a>

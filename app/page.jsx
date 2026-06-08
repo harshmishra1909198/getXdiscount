@@ -343,7 +343,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="relative z-10 flex min-h-[520px] justify-self-end lg:min-h-[620px] lg:w-full lg:max-w-[760px] lg:items-center lg:justify-center">
+          <div className="relative z-10 flex min-h-[420px] justify-self-center lg:min-h-[620px] lg:w-full lg:max-w-[760px] lg:items-center lg:justify-center lg:justify-self-end">
             <ProductPagePreview />
           </div>
         </section>
