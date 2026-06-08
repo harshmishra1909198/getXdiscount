@@ -6,20 +6,31 @@ const FEATURE_CHIPS = [
   "No code setup for merchants",
 ];
 
-const DASHBOARD_CARDS = [
+const PRODUCT_PREVIEW_OFFERS = [
   {
-    title: "Qty breaks",
-    text: "Flexible tiered discounts",
+    title: "Buy 2+, Save 10%",
+    note: "Most shoppers start here",
+    badge: "10% Off",
+    price: "Rs. 1124.10 each",
+    chips: [],
   },
   {
-    title: "Targeting",
-    text: "Products and customer segments",
+    title: "Buy 3+, Save 15% + Free Shipping",
+    note: "Most Popular",
+    badge: "Most Popular",
+    price: "Rs. 1061.65 each",
+    chips: ["Free Shipping"],
   },
   {
-    title: "Schedules",
-    text: "Launch and stop automatically",
+    title: "Buy 5+, Save 20% + Free Gift",
+    note: "Best Value",
+    badge: "Best Value",
+    price: "Rs. 999.20 each",
+    chips: ["Free Gift"],
   },
 ];
+
+const PRODUCT_PREVIEW_TAGS = ["Highest tier only", "Free Gift", "VIP +5% ready"];
 
 const PROBLEM_CARDS = [
   {
@@ -144,50 +155,183 @@ const FAQ = [
   "Will shoppers see the discount tiers on product pages?",
 ];
 
+function ProductPagePreview() {
+  return (
+    <div className="relative w-full max-w-[520px] sm:max-w-[580px] lg:max-w-[640px] xl:max-w-[700px]">
+      <div className="absolute -left-6 -top-6 h-36 w-36 rounded-full bg-[#d9e8ff] blur-3xl opacity-75" />
+      <div className="absolute -bottom-10 right-0 h-28 w-28 rounded-full bg-[#ffd9b8] blur-3xl opacity-70" />
+
+      <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-b from-[#f8f0e7] to-[#f5eee5] p-4 shadow-[0_36px_90px_rgba(15,23,42,0.16)] ring-1 ring-white/90">
+        <div className="rounded-[26px] border border-slate-200 bg-white p-4 sm:p-5">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-[17px] font-semibold tracking-tight text-slate-950">
+                Product page preview
+              </p>
+              <p className="mt-1 max-w-[24ch] text-[11px] leading-4 text-slate-500">
+                Preview how this offer will look to shoppers before you save.
+              </p>
+            </div>
+            <span className="inline-flex rounded-full bg-[#c8f4c9] px-3 py-1 text-[11px] font-semibold text-[#126b1a]">
+              Preview
+            </span>
+          </div>
+
+          <div className="mt-3 h-[3px] rounded-full bg-gradient-to-r from-[#4d86f0] via-[#f0ba63] to-[#e58b31]" />
+
+          <div className="mt-4 rounded-[20px] border border-slate-200 bg-[#f6f9ff] p-3 shadow-[0_1px_0_rgba(255,255,255,0.8)_inset]">
+            <div className="flex items-center gap-3">
+              <div className="h-14 w-14 shrink-0 rounded-[12px] bg-gradient-to-br from-[#8fb5ff] to-[#4c8dea] shadow-[0_8px_16px_rgba(76,141,234,0.28)]" />
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-[15px] font-semibold text-slate-900">
+                  Premium Essentials Pack
+                </p>
+                <div className="mt-1 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <span className="text-[18px] font-black tracking-tight text-slate-950">
+                    Rs. 1,249.00
+                  </span>
+                  <span className="text-[13px] text-slate-500 line-through">
+                    Rs. 1,499.00
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-[24px] border border-[#d95f16] bg-[#fff4ea] p-4 shadow-[0_1px_0_rgba(255,255,255,0.8)_inset]">
+            <p className="text-[18px] font-black tracking-[-0.04em] text-[#a74511]">
+              Buy more, save more
+            </p>
+
+            <div className="mt-3 flex flex-wrap gap-2">
+              <span className="inline-flex rounded-full border border-[#e36d25] bg-white px-3 py-1 text-[12px] font-semibold text-[#b44d18]">
+                3 tiers
+              </span>
+              <span className="inline-flex rounded-full border border-[#e36d25] bg-white px-3 py-1 text-[12px] font-semibold text-[#b44d18]">
+                Best at 5+
+              </span>
+            </div>
+
+            <div className="mt-4 flex items-center justify-between text-[10px] font-black uppercase tracking-[0.2em] text-[#b44d18]">
+              <span>Offer</span>
+              <span>Your savings</span>
+            </div>
+
+            <div className="mt-3 grid gap-3">
+              {PRODUCT_PREVIEW_OFFERS.map((offer) => (
+                <article
+                  key={offer.title}
+                  className="rounded-[18px] border border-[#e36d25] bg-white p-3 shadow-[0_1px_0_rgba(255,255,255,0.8)_inset]"
+                >
+                  <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
+                    <div>
+                      <p className="text-[16px] font-semibold leading-6 text-[#b44d18]">
+                        {offer.title}
+                      </p>
+                      <p className="mt-1 text-[12px] leading-5 text-[#df6b20]">
+                        {offer.note}
+                      </p>
+
+                      {offer.chips.length > 0 ? (
+                        <div className="mt-2 flex flex-wrap gap-2">
+                          {offer.chips.map((chip) => (
+                            <span
+                              key={chip}
+                              className="inline-flex rounded-full border border-[#e36d25] bg-[#fffaf6] px-3 py-1 text-[11px] font-semibold text-[#b44d18]"
+                            >
+                              {chip}
+                            </span>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+
+                    <div className="text-left md:text-right">
+                      <span className="inline-flex rounded-full bg-[#b44d18] px-4 py-1.5 text-[14px] font-bold text-white shadow-sm">
+                        {offer.badge}
+                      </span>
+                      <p className="mt-2 text-[12px] font-medium text-[#b44d18]">
+                        {offer.price}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {PRODUCT_PREVIEW_TAGS.map((tag, index) => (
+                <span
+                  key={tag}
+                  className={`inline-flex rounded-full border px-3 py-1 text-[12px] font-semibold ${
+                    index === 1
+                      ? "border-[#4f98d6] bg-[#f1f8ff] text-[#3174a8]"
+                      : index === 0
+                        ? "border-[#e36d25] bg-white text-[#b44d18]"
+                        : "border-slate-300 bg-white text-slate-700"
+                  }`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <div className="min-h-screen">
       <main className="w-full pb-16 pt-8">
         <section
           id="top"
-          className="grid gap-8 overflow-hidden rounded-none bg-[#fff9f6] px-5 py-10 sm:px-8 lg:grid-cols-[minmax(0,0.98fr)_minmax(0,1.02fr)] lg:px-12 lg:py-14 xl:px-16"
+          className="relative isolate grid gap-10 overflow-hidden rounded-[36px] border border-slate-200/70 bg-[linear-gradient(135deg,rgba(255,255,255,0.96),rgba(255,248,241,0.98)_42%,rgba(255,243,235,0.9))] px-5 py-10 shadow-[0_30px_90px_rgba(15,23,42,0.08)] sm:px-8 lg:grid-cols-[minmax(0,0.98fr)_minmax(0,1.02fr)] lg:px-12 lg:py-14 xl:px-16"
         >
-          <div className="flex flex-col justify-center">
-            <span className="inline-flex w-fit rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-slate-600">
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+            <div className="absolute -left-24 top-10 h-80 w-80 rounded-full bg-[#ffd9b0]/40 blur-3xl" />
+            <div className="absolute -right-24 bottom-[-6rem] h-[22rem] w-[22rem] rounded-full bg-[#cfe3ff]/40 blur-3xl" />
+            <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white/90 to-transparent" />
+          </div>
+
+          <div className="relative z-10 flex flex-col justify-center">
+            <span className="inline-flex w-fit rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-slate-600 shadow-sm backdrop-blur">
               Built for Shopify growth
             </span>
             <h1 className="mt-5 max-w-[12ch] text-[clamp(2.8rem,5.8vw,5.2rem)] font-black leading-[0.92] tracking-[-0.06em] text-black">
               Increase average order value with smarter volume discounts
             </h1>
 
-            <p className="mt-7 max-w-[40rem] text-[1.08rem] leading-9 text-slate-700">
+            <p className="mt-7 max-w-[40rem] text-[1.08rem] leading-8 text-slate-700">
               Create Shopify volume offers with quantity breaks, free shipping tiers,
               customer targeting, scheduling, and storefront-ready discount blocks in
               minutes.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-7 grid gap-3 sm:grid-cols-3">
               {FEATURE_CHIPS.map((item) => (
-                <span
+                <div
                   key={item}
-                  className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600"
+                  className="rounded-[18px] border border-white/70 bg-white/80 px-4 py-3 shadow-sm backdrop-blur"
                 >
-                  {item}
-                </span>
+                  <p className="text-sm font-semibold leading-6 text-slate-700">{item}</p>
+                </div>
               ))}
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="https://apps.shopify.com/"
-                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-[8px] border-2 border-[#353535] bg-[#ba4900] px-5 py-3 text-[1.02rem] font-semibold text-white shadow-[0_4px_0_#353535] transition hover:-translate-y-0.5"
+                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-[14px] border border-[#5b2500] bg-[#ba4900] px-6 py-3 text-[1.02rem] font-semibold text-white shadow-[0_12px_24px_rgba(186,73,0,0.22)] transition hover:-translate-y-0.5 hover:bg-[#d15603]"
               >
                 <span className="text-lg">🛍</span>
                 <span>Install on Shopify</span>
               </a>
               <a
                 href="#features"
-                className="inline-flex min-h-12 items-center justify-center rounded-[8px] border-2 border-[#353535] bg-white px-6 py-3 text-[1.02rem] font-semibold text-[#b94a00] transition hover:-translate-y-0.5 hover:bg-orange-50"
+                className="inline-flex min-h-12 items-center justify-center rounded-[14px] border border-slate-300 bg-white px-6 py-3 text-[1.02rem] font-semibold text-slate-900 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50"
               >
                 See how it works
               </a>
@@ -199,68 +343,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="relative min-h-[520px] justify-self-end lg:min-h-[620px] lg:w-full lg:max-w-[760px]">
-            <div className="pointer-events-none absolute left-8 top-8 h-[420px] w-[560px] rounded-[36px] bg-[#2e2d2b] shadow-[0_28px_70px_rgba(0,0,0,0.16)]" />
-            <div className="pointer-events-none absolute left-[34px] top-[18px] h-[440px] w-[600px] rounded-[28px] bg-white shadow-[0_16px_45px_rgba(0,0,0,0.12)]" />
-
-            <div className="pointer-events-none absolute left-[56px] top-[46px] h-[410px] w-[556px] overflow-hidden rounded-[22px] border-4 border-[#2c2c2c] bg-white">
-              <div className="flex items-center justify-between border-b border-slate-200 px-4 py-2 text-[11px] text-slate-500">
-                <div className="flex gap-6 pl-10">
-              <span>Volume Discount Dashboard</span>
-                </div>
-                <span className="rounded bg-[#2d2d2d] px-3 py-1 text-white">Offer builder snapshot</span>
-              </div>
-
-              <div className="grid gap-4 p-5">
-                <div className="grid gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(220px,0.85fr)]">
-                  <div className="rounded-[18px] border border-slate-200 bg-[#fdf7f0] p-4 shadow-sm">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                      STOREFRONT PREVIEW
-                    </p>
-                    <h3 className="mt-2 text-[22px] font-black tracking-[-0.04em] text-slate-950">
-                      Buy more and save
-                    </h3>
-                    <div className="mt-4 space-y-3">
-                      {["Buy 2+ / Save 10%", "Buy 3+ / Save 15% + Free Shipping", "Buy 5+ / Save 20%"].map(
-                        (row) => (
-                          <div
-                            key={row}
-                            className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700"
-                          >
-                            <span>{row.split(" / ")[0]}</span>
-                            <span className="font-semibold text-[#b94a00]">{row.split(" / ")[1]}</span>
-                          </div>
-                        ),
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="grid gap-3">
-                    {DASHBOARD_CARDS.map((item) => (
-                      <div key={item.title} className="rounded-[18px] border border-slate-200 bg-slate-50 p-4">
-                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                          {item.title}
-                        </p>
-                        <p className="mt-2 text-sm font-semibold text-slate-900">{item.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="grid gap-3 md:grid-cols-3">
-                  {[
-                    "Tiered offers - Create multi-quantity pricing rules",
-                    "Customer rules - Target logged-in, tagged, or specific buyers",
-                    "Storefront block - Show savings clearly on product pages",
-                    "Scheduled launches - Run promotions on your own timeline",
-                  ].map((item) => (
-                    <div key={item} className="rounded-[18px] border border-slate-200 bg-white p-4 text-sm text-slate-700 shadow-sm">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="relative z-10 flex min-h-[520px] justify-self-end lg:min-h-[620px] lg:w-full lg:max-w-[760px] lg:items-center lg:justify-center">
+            <ProductPagePreview />
           </div>
         </section>
 
@@ -310,7 +394,7 @@ export default function HomePage() {
               The solution
             </span>
             <h2 className="mt-4 max-w-xl text-[clamp(2.2rem,3.7vw,3.7rem)] font-black leading-[0.98] tracking-[-0.05em] text-black">
-              Volume Discount App gives Shopify merchants a cleaner way to drive larger orders.
+              VolumeX gives Shopify merchants a cleaner way to drive larger orders.
             </h2>
             <p className="mt-6 max-w-xl text-[1.05rem] leading-9 text-slate-500">
               Build tiered offers that reward bigger carts, target the right products
@@ -470,7 +554,7 @@ export default function HomePage() {
         </section>
 
         <section className="px-5 py-10 sm:px-8 lg:px-12 lg:py-14 xl:px-16">
-          <div className="rounded-[28px] border border-slate-200 bg-[#f8e8d8] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:p-8 lg:p-10">
+          <div className="rounded-[32px] border border-orange-200/70 bg-[linear-gradient(145deg,#fff4eb,#fff8f2_55%,#fffdfc)] p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
             <span className="inline-flex w-fit rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#b94a00]">
               Ready to launch
             </span>
@@ -485,14 +569,14 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="https://apps.shopify.com/"
-                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-[4px] border-4 border-[#353535] bg-[#ba4900] px-5 py-3 text-[1.05rem] font-semibold text-white shadow-[0_4px_0_#353535] transition hover:-translate-y-0.5"
+                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-[14px] border border-[#5b2500] bg-[#ba4900] px-6 py-3 text-[1.05rem] font-semibold text-white shadow-[0_12px_24px_rgba(186,73,0,0.22)] transition hover:-translate-y-0.5 hover:bg-[#d15603]"
               >
                 <span className="text-lg">🛍</span>
                 <span>Start free trial</span>
               </a>
               <a
                 href="#features"
-                className="inline-flex min-h-12 items-center justify-center rounded-[4px] border-2 border-[#353535] bg-white px-6 py-3 text-[1.05rem] font-medium text-[#b94a00] transition hover:-translate-y-0.5 hover:bg-orange-50"
+                className="inline-flex min-h-12 items-center justify-center rounded-[14px] border border-slate-300 bg-white px-6 py-3 text-[1.05rem] font-semibold text-slate-900 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50"
               >
                 Explore features
               </a>

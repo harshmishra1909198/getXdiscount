@@ -11,8 +11,8 @@ import {
 import { CopyEmailButton } from "../../components/CopyEmailButton";
 
 export const metadata = {
-  title: "Privacy Policy | Volume Discount App",
-  description: "Privacy policy for Volume Discount App, including data handling and merchant contact details.",
+  title: "Privacy Policy | VolumeX",
+  description: "Privacy policy for VolumeX, including data handling and merchant contact details.",
 };
 
 const SUPPORT_EMAIL = "getxdiscount@gmail.com";
@@ -45,9 +45,10 @@ export default function PrivacyPolicyPage() {
             <AnchorList items={SECTIONS} />
           </div>
           <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600">
-            The app is built to create and manage volume discount offers. To deliver
-            those features, it only accesses the information needed to authenticate the
-            app, configure discounts, render storefront content, and support merchants.
+            VolumeX is a Shopify app for creating and managing volume discount
+            offers. To deliver those features, it only accesses the information needed
+            to authenticate the app, configure discounts, render storefront content,
+            and support merchants.
           </p>
         </Card>
 
@@ -61,9 +62,9 @@ export default function PrivacyPolicyPage() {
             text="This policy applies to the app, related storefront blocks, support requests, and the merchant-facing features that run through Shopify."
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
-            We use information received from Shopify and information you enter into the
-            app to operate the service. We do not intentionally collect payment card
-            data, and we do not sell merchant or customer data.
+            We use information received from Shopify and information you enter into
+            VolumeX to operate the service. We do not intentionally collect payment
+            card data, and we do not sell merchant or customer data.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">
             Shopify remains the primary platform for store, order, and customer
@@ -80,7 +81,7 @@ export default function PrivacyPolicyPage() {
             text="The exact data depends on the features you enable and the permissions you approve in Shopify."
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
-            The app may access store name, shop domain, merchant contact details,
+            VolumeX may access store name, shop domain, merchant contact details,
             currency, time zone, billing country, plan name, owner name, and app
             installation details.
           </p>
@@ -150,7 +151,7 @@ export default function PrivacyPolicyPage() {
           />
           <div className="mt-5">
             <HighlightBox title="Uninstall behavior">
-              When you uninstall the app, we remove active Shopify session records and
+              When you uninstall VolumeX, we remove active Shopify session records and
               store-specific discount records from our system. We may retain limited
               records such as installation history, uninstall history, logs, or other
               information needed for legal, security, dispute resolution, or accounting
@@ -158,8 +159,8 @@ export default function PrivacyPolicyPage() {
             </HighlightBox>
           </div>
           <p className="mt-4 text-base leading-8 text-slate-600">
-            If you want us to delete remaining store-specific information, contact us at
-            the email address below and we will review the request according to
+            If you want us to delete remaining store-specific information, contact us
+            at the email address below and we will review the request according to
             applicable law and our retention obligations.
           </p>
         </Card>
@@ -173,9 +174,9 @@ export default function PrivacyPolicyPage() {
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
             Access to merchant information is restricted to app processes and
-            authorized personnel who need it to operate or support the service. We also
-            rely on Shopify authentication and application-level controls to reduce
-            unauthorized access risk.
+            authorized personnel who need it to operate or support the service. We
+            also rely on Shopify authentication and application-level controls to
+            reduce unauthorized access risk.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">
             No system is perfectly secure, so we encourage merchants to keep their
@@ -219,7 +220,7 @@ export default function PrivacyPolicyPage() {
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
             If we make material changes, we will update this page with the revised
-            policy. Continued use of the app after an update means you accept the
+            policy. Continued use of VolumeX after an update means you accept the
             revised policy.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">

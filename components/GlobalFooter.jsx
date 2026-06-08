@@ -13,6 +13,8 @@ const LINK_GROUPS = [
 ];
 
 export function GlobalFooter() {
+  const footerBadges = ["Tiered offers", "Storefront block", "Merchant support"];
+
   return (
     <footer className="mt-6 bg-[#271a13] px-5 py-10 text-white sm:px-8 lg:px-12 lg:py-14 xl:px-16">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(220px,0.7fr)]">
@@ -23,7 +25,7 @@ export function GlobalFooter() {
               alt="Volume Discount App logo"
               className="h-8 w-8 rounded-lg object-contain"
             />
-            <span className="text-lg font-black tracking-tight">Volume Discount App</span>
+            <span className="text-lg font-black tracking-tight">VolumeX</span>
           </div>
 
           <p className="mt-6 max-w-xl text-[1.05rem] leading-8 text-white/78">
@@ -32,12 +34,12 @@ export function GlobalFooter() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2.5">
-            {["f", "in", "X", "◌", "▶"].map((icon) => (
+            {footerBadges.map((badge) => (
               <span
-                key={icon}
-                className="grid h-9 w-9 place-items-center rounded-[6px] bg-black text-[17px] font-bold text-white shadow-sm"
+                key={badge}
+                className="inline-flex items-center rounded-full border border-white/10 bg-white/8 px-3 py-1 text-xs font-semibold text-white/85 shadow-sm backdrop-blur"
               >
-                {icon}
+                {badge}
               </span>
             ))}
           </div>

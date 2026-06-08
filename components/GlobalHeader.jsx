@@ -18,9 +18,9 @@ export function GlobalHeader() {
           />
           <span>
             <span className="block text-[17px] font-extrabold tracking-tight text-slate-950">
-              Volume Discount App
+              VolumeX
             </span>
-            <span className="block text-xs text-slate-500">Shopify public app</span>
+            <span className="block text-xs text-slate-500">Discount app</span>
           </span>
         </Link>
 
@@ -38,7 +38,7 @@ export function GlobalHeader() {
 
         <a
           href="https://apps.shopify.com/"
-          className="inline-flex min-h-12 items-center gap-2 rounded-[8px] border-2 border-[#353535] bg-white px-4 py-2 text-[15px] font-semibold text-orange-700 shadow-sm transition hover:bg-orange-50"
+          className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[#5b2500] bg-[#ba4900] px-5 py-2 text-[15px] font-semibold text-white shadow-[0_12px_24px_rgba(186,73,0,0.18)] transition hover:bg-[#d15603]"
         >
           <span className="text-[16px]">🛍</span>
           <span>Get Started</span>

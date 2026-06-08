@@ -29,7 +29,7 @@ function NavLink({ item }) {
 }
 
 export function SiteNavbar({
-  logoLabel = "Volume Discount App",
+  logoLabel = "VolumeX",
   logoMark = "VD",
   ctaLabel = "Get Started",
   ctaHref = "https://apps.shopify.com/",
@@ -58,7 +58,7 @@ export function SiteNavbar({
         <div className="justify-self-end">
           <a
             href={ctaHref}
-            className="inline-flex min-h-12 items-center gap-2 rounded-[999px] border border-slate-800 bg-slate-900 px-5 py-2 text-[15px] font-semibold text-white shadow-sm transition hover:bg-slate-800"
+            className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[#5b2500] bg-[#ba4900] px-5 py-2 text-[15px] font-semibold text-white shadow-[0_12px_24px_rgba(186,73,0,0.18)] transition hover:bg-[#d15603]"
           >
             <span className="text-[16px]">+</span>
             <span>{ctaLabel}</span>

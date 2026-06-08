@@ -1,4 +1,4 @@
-export function LegalLayout({ title, description, children, badge = "Volume Discount App" }) {
+export function LegalLayout({ title, description, children, badge = "VolumeX" }) {
   return (
     <div className="min-h-screen bg-[#fff9f6]">
       <main className="w-full pb-16 pt-8">
