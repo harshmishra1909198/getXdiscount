@@ -11,8 +11,8 @@ import {
 import { CopyEmailButton } from "../../components/CopyEmailButton";
 
 export const metadata = {
-  title: "Privacy Policy | VolumeX",
-  description: "Privacy policy for VolumeX, including data handling and merchant contact details.",
+  title: "Privacy Policy | Discountifier App",
+  description: "Privacy policy for Discountifier App, including data handling and merchant contact details.",
 };
 
 const SUPPORT_EMAIL = "getxdiscount@gmail.com";
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
             <AnchorList items={SECTIONS} />
           </div>
           <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600">
-            VolumeX is a Shopify app for creating and managing volume discount
+            Discountifier App is a Shopify app for creating and managing volume discount
             offers. To deliver those features, it only accesses the information needed
             to authenticate the app, configure discounts, render storefront content,
             and support merchants.
@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
             We use information received from Shopify and information you enter into
-            VolumeX to operate the service. We do not intentionally collect payment
+            Discountifier App to operate the service. We do not intentionally collect payment
             card data, and we do not sell merchant or customer data.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">
@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
             text="The exact data depends on the features you enable and the permissions you approve in Shopify."
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
-            VolumeX may access store name, shop domain, merchant contact details,
+            Discountifier App may access store name, shop domain, merchant contact details,
             currency, time zone, billing country, plan name, owner name, and app
             installation details.
           </p>
@@ -151,7 +151,7 @@ export default function PrivacyPolicyPage() {
           />
           <div className="mt-5">
             <HighlightBox title="Uninstall behavior">
-              When you uninstall VolumeX, we remove active Shopify session records and
+              When you uninstall Discountifier App, we remove active Shopify session records and
               store-specific discount records from our system. We may retain limited
               records such as installation history, uninstall history, logs, or other
               information needed for legal, security, dispute resolution, or accounting
@@ -220,7 +220,7 @@ export default function PrivacyPolicyPage() {
           />
           <p className="mt-4 text-base leading-8 text-slate-600">
             If we make material changes, we will update this page with the revised
-            policy. Continued use of VolumeX after an update means you accept the
+            policy. Continued use of Discountifier App after an update means you accept the
             revised policy.
           </p>
           <p className="mt-4 text-base leading-8 text-slate-600">

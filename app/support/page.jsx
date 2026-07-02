@@ -12,8 +12,8 @@ import { CopyEmailButton } from "../../components/CopyEmailButton";
 import { SupportContactForm } from "../../components/SupportContactForm";
 
 export const metadata = {
-  title: "Support | VolumeX",
-  description: "Support page for VolumeX with direct merchant contact details.",
+  title: "Support | Discountifier App",
+  description: "Support page for Discountifier App with direct merchant contact details.",
 };
 
 const SUPPORT_EMAIL = "getxdiscount@gmail.com";
@@ -29,7 +29,7 @@ export default function SupportPage() {
   return (
     <LegalLayout
       title="Support"
-      description="Need help with offer setup, storefront visibility, or billing questions? VolumeX support is available by email for merchant assistance."
+      description="Need help with offer setup, storefront visibility, or billing questions? Discountifier App support is available by email for merchant assistance."
     >
       <Container>
         <Card className="bg-gradient-to-br from-white to-slate-50/70">
@@ -42,7 +42,7 @@ export default function SupportPage() {
             <AnchorList items={SECTIONS} />
           </div>
           <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600">
-            If you need help installing VolumeX, enabling the theme app extension
+            If you need help installing Discountifier App, enabling the theme app extension
             block, reviewing offer visibility, or understanding app behavior,
             contact the support team by email.
           </p>
@@ -75,7 +75,7 @@ export default function SupportPage() {
             <SectionTitle
               kicker="Contact details"
               title="Email goes directly to our support inbox"
-              text="Every message from this form is sent to the VolumeX support inbox at getxdiscount@gmail.com."
+              text="Every message from this form is sent to the Discountifier App support inbox at getxdiscount@gmail.com."
             />
             <div className="mt-5 flex flex-wrap items-center gap-3 rounded-[20px] border border-slate-200 bg-slate-50 p-5">
               <a
@@ -113,7 +113,7 @@ export default function SupportPage() {
                 How do I show the offer block on a product page?
               </h3>
               <p className="mt-3 text-sm leading-7 text-slate-600">
-                Open the Shopify theme editor, add the VolumeX app block to the
+                Open the Shopify theme editor, add the Discountifier App block to the
                 relevant product template, and save the theme changes.
               </p>
             </article>
@@ -132,7 +132,7 @@ export default function SupportPage() {
                 Can I get help after installation?
               </h3>
               <p className="mt-3 text-sm leading-7 text-slate-600">
-                Yes. VolumeX support can help with setup clarification, app behavior,
+                Yes. Discountifier App support can help with setup clarification, app behavior,
                 and questions related to using supported features inside Shopify.
               </p>
             </article>

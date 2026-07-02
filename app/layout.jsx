@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "VolumeX | Shopify Volume Discount App",
+  title: "Discountifier App | Shopify Volume Discount App",
   description:
-    "Create quantity breaks, customer-specific offers, and storefront-ready volume discounts for Shopify with VolumeX.",
+    "Create quantity breaks, customer-specific offers, and storefront-ready volume discounts for Shopify with Discountifier App.",
 };
 
 export default function RootLayout({ children }) {

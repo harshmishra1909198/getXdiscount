@@ -29,7 +29,7 @@ function NavLink({ item }) {
 }
 
 export function SiteNavbar({
-  logoLabel = "VolumeX",
+  logoLabel = "Discountifier App",
   logoMark = "VD",
   ctaLabel = "Get Started",
   ctaHref = "https://apps.shopify.com/",

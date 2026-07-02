@@ -12,15 +12,15 @@ export function GlobalHeader() {
       <div className="grid w-full grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-3 px-4 py-3 sm:px-6 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center lg:gap-4 lg:px-12 lg:py-4">
         <Link href="/" className="order-1 flex items-center gap-2 sm:gap-3 lg:order-1">
           <img
-            src="/volume-discount-logo.png"
-            alt="Volume Discount App logo"
+            src="/discountifier-logo.jpg"
+            alt="Discountifier App logo"
             className="h-10 w-10 rounded-xl object-contain sm:h-12 sm:w-12"
           />
           <span>
             <span className="block text-[15px] font-extrabold tracking-tight text-slate-950 sm:text-[17px]">
-              VolumeX
+              Discountifier App
             </span>
-            <span className="block text-[11px] text-slate-500 sm:text-xs">Discount app</span>
+            <span className="block text-[11px] text-slate-500 sm:text-xs">Shopify app</span>
           </span>
         </Link>
 

@@ -21,11 +21,11 @@ export function GlobalFooter() {
         <div>
           <div className="inline-flex items-center gap-3 rounded-[22px] bg-white px-4 py-2.5 text-slate-900 shadow-sm">
             <img
-              src="/volume-discount-logo.png"
-              alt="Volume Discount App logo"
+              src="/discountifier-logo.jpg"
+              alt="Discountifier App logo"
               className="h-8 w-8 rounded-lg object-contain"
             />
-            <span className="text-lg font-black tracking-tight">VolumeX</span>
+            <span className="text-lg font-black tracking-tight">Discountifier App</span>
           </div>
 
           <p className="mt-6 max-w-xl text-[1.05rem] leading-8 text-white/78">

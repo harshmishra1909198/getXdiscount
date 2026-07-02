@@ -394,7 +394,7 @@ export default function HomePage() {
               The solution
             </span>
             <h2 className="mt-4 max-w-xl text-[clamp(2.2rem,3.7vw,3.7rem)] font-black leading-[0.98] tracking-[-0.05em] text-black">
-              VolumeX gives Shopify merchants a cleaner way to drive larger orders.
+              Discountifier App gives Shopify merchants a cleaner way to drive larger orders.
             </h2>
             <p className="mt-6 max-w-xl text-[1.05rem] leading-9 text-slate-500">
               Build tiered offers that reward bigger carts, target the right products
