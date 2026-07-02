@@ -9,6 +9,7 @@ import {
   AnchorList,
 } from "../../components/LegalPrimitives";
 import { CopyEmailButton } from "../../components/CopyEmailButton";
+import { SupportContactForm } from "../../components/SupportContactForm";
 
 export const metadata = {
   title: "Support | VolumeX",
@@ -64,8 +65,17 @@ export default function SupportPage() {
           <Card id="contact">
             <SectionTitle
               kicker="Contact"
-              title="Email our support team"
-              text="Include your store domain, a short description of the issue, and screenshots when possible so we can respond faster."
+              title="Send a message to our support team"
+              text="Include your store domain, a short description of the issue, and your email address so we can respond faster."
+            />
+            <SupportContactForm />
+          </Card>
+
+          <Card id="response-time">
+            <SectionTitle
+              kicker="Contact details"
+              title="Email goes directly to our support inbox"
+              text="Every message from this form is sent to the VolumeX support inbox at getxdiscount@gmail.com."
             />
             <div className="mt-5 flex flex-wrap items-center gap-3 rounded-[20px] border border-slate-200 bg-slate-50 p-5">
               <a
@@ -76,19 +86,6 @@ export default function SupportPage() {
               </a>
               <CopyEmailButton email={SUPPORT_EMAIL} />
             </div>
-            <p className="mt-4 text-base leading-8 text-slate-600">
-              Support requests may include help with app installation, storefront
-              block placement, discount configuration, campaign troubleshooting, and
-              billing questions.
-            </p>
-          </Card>
-
-          <Card id="response-time">
-            <SectionTitle
-              kicker="Response time"
-              title="What merchants can expect"
-              text="We aim to keep support clear, practical, and focused on resolving store-impacting issues quickly."
-            />
             <div className="mt-5">
               <HighlightBox title="Typical turnaround">
                 Most support requests receive an initial response within one business
@@ -97,9 +94,9 @@ export default function SupportPage() {
               </HighlightBox>
             </div>
             <p className="mt-4 text-base leading-8 text-slate-600">
-              Resolution time depends on issue complexity, storefront setup, and
-              whether the request needs reproduction or Shopify-specific
-              investigation.
+              Support requests may include help with app installation, storefront
+              block placement, discount configuration, campaign troubleshooting, and
+              billing questions.
             </p>
           </Card>
         </div>
